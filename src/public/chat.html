@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>MS Teams chat</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/6510466b6c.js" crossorigin="anonymous"></script>
+    <script>
+        const params = new URLSearchParams(location.search);
+        if (!params.get("room")) location.href = "/";
+    </script>
+    <script src="https://www.gstatic.com/firebasejs/3.7.4/firebase.js"></script>
+ 
+ <style>.sidenav {
+    height: 100%; 
+    width: 50px; 
+    position: fixed; 
+    z-index: 1; 
+    top: 0; 
+    left: 0;
+    background-color: white; 
+    overflow-x: hidden; 
+    padding-top: 20px;
+  }
+  
+  .sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+  }
+  
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  .main {
+    margin-left: 160px; 
+    padding: 0px 10px;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+  
+  h1{
+      color: rgb(72, 73, 73);
+  }
+  </style>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<script>
+  
+    
+    
+  </script>
+<body background-color=grey>
+
+    <!-- Side navigation -->
+<div class="sidenav">
+    <img src="https://www.marshall.edu/it/files/microsoft-team-2019.png">
+    <br>
+    <BR>
+<h1 ><p align="center">C</p></h1>
+<h1 ><p align="center">H</p></h1>
+<h1 ><p align="center">A</p></h1>
+<h1 ><p align="center">T</p></h1>
+<BR>
+<h1 ><p align="center">R</p></h1>
+<h1 ><p align="center">O</p></h1>
+<h1 ><p align="center">O</p></h1>
+<h1 ><p align="center">M</p></h1>
+
+
+
+
+
+  </div>
+  
+
+
+    <div class="overlay" id="overlay">
+        <div class="box">
+            <div class="head-name">Please enter your name </div>
+            <input type="text" class="name-field" placeholder="Name" id="name-field"></input><br>
+            <button class="continue-name">Continue</button>
+
+        </div>
+    </div>
+    <div class="container-room">
+        <div class="right-cont onlyChat">
+            <div class="head-title">
+
+                <div class="chats"><i class="fas fa-comment-alt mr-1"></i>Chats</div>
+                <div class="attendies"><i class="fas fa-users mr-1"></i>Attendies</div>
+
+
+            </div>
+
+            <div class="chat-cont">
+
+            </div>
+            <div class="uploadPercentage" id="uploader" > <span class="uploadPercentageSpan" id="uploadPercentage"> </span> </div>
+            <div class="chat-input-cont">
+                <input type="file" style="display: none;" id="fileButton" >
+                <i class="fa fa-paperclip" style="padding-top: 11px;" onclick="fileButton.click()" aria-hidden="true"></i>
+                 <div class="ci-cont"><input type="text" class="chat-input" placeholder="Type chat here.."></div>
+                <div class="ci-send"><button class="chat-send">Send</button></div>
+            </div>
+        </div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/chat.js"></script>
+    <script src="js/fileUpload.js"></script>
+</body>
+
+</html>

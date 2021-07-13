@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Microsoft teams</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/6510466b6c.js" crossorigin="anonymous"></script>
+<style>
+    @import url(https://fonts.googleapis.com/css?family=Roboto:400,700);
+
+:root {
+	/* Base font size */
+	font-size: 19px;
+
+	/* Heading height variable*/
+	--heading-height: 10em;
+}
+
+body {
+	font-family: "Roboto", Arial, sans-serif;
+	min-height: 100vh;
+	background-color:rgb(219, 228, 230);
+}
+
+header {
+	position: fixed;
+	width: 100%;
+	height: var(--heading-height);
+}
+
+/* Create angled background with 'before' pseudo-element */
+header::before {
+  
+
+	content: "";
+	display: block;
+	position: absolute;
+	left: 0;
+	bottom: 6em;
+	width: 100%;
+	height: calc(var(--heading-height) + 10em);
+	z-index: -1;
+	transform: skewY(-3.5deg);
+	background: 
+
+
+		linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,.4)),
+		url(https://image.freepik.com/free-photo/abstract-oscillating-network-points-lines-looped-animation-with-depth-field_96743-48.jpg) no-repeat center,
+		linear-gradient(#4e4376, #2b5876);
+	background-size: cover;
+	border-bottom: .2em solid black(138, 35, 35);
+}
+
+h1 {
+	font-size: calc(0.8em + 2.6vw);
+	font-weight: 300;
+	letter-spacing: .01em;
+	padding: 0rem 0 0 4.5rem;
+	text-shadow: .022em .022em .022em #111;
+	color: #fff;
+}
+
+main {
+	padding: calc(var(--heading-height) + 1.5vw) 4em 0;
+}
+
+p {
+	font-size: calc(2em + .25vw);
+	font-weight: 400;
+	line-height: 2;
+	margin-bottom: 1.5em;
+	color: #fcfcfc;
+}
+
+</style>
+</head>
+
+<body>
+    <navbar>
+        <div class="logo">
+        <img src=
+        "https://venturebeat.com/wp-content/uploads/2020/05/microsoft-teams-logo.png?fit=1500%2C750&strip=all" 
+        width="190" height="75"    align="left">
+    </div>
+        <div class="logo">Microsoft Teams</div>
+    </navbar>
+    
+    <header>
+        <h1>Microsoft teams</h1>
+    </header>
+    
+
+        <div class="main">
+            <div class="create-join">
+                <div class="text"><div class="head">Welcome to Microsoft Teams!</div>
+                <div class="subtext">Video call:  small word but bigger impact.
+                </div>
+                </div>
+                <button id="createroom" class="createroom-butt unselectable">Create Room</button><br>
+                <input type="text" name="room" spellcheck="false" placeholder="Enter the code" id="roomcode" class="roomcode"><br>
+                <br>
+                <br>
+                <div class="joinroom unselectable" id="joinroom">Join Room</div> &nbsp; &nbsp; &nbsp; 
+                <div class="joinroom unselectable" id="chatroom">Join a Chat</div>
+
+            </div>
+            <div class="video-cont">
+                <video class="video-self" autoplay muted playsinline></video>
+                <div class="settings">
+                    <div class="device" id="mic"><i class="fas fa-microphone"></i></div>
+                    <div class="device" id="webcam"><i class="fas fa-video"></i></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- <div class="main-cont">
+
+            <form class="roomform" action="room.html" method="GET">
+                <div class="formcont">
+                    <input type="text" name="name" placeholder="Enter your name" id="username" class="inputtext"><br>
+                    
+                    <button type="submit" class="butt unselectable" id="joinroom">Join Room</button>
+                    
+                </div>
+            </form>
+
+        </div> -->
+
+    <!-- </div> -->
+
+    <script src="js/landing.js"></script>
+</body>
+
+</html>
